@@ -7,9 +7,10 @@
 # exit on error
 set -e
 
-TMUX_VERSION=2.4
+TMUX_VERSION=2.5
 LIBEVENT_VERSION=2.1.8
 NCURSES_VERSION=6.0
+export CPPFLAGS="-P"
 
 # create our directories
 mkdir -p $HOME/local $HOME/tmux_tmp
