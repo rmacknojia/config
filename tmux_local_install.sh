@@ -50,10 +50,10 @@ tar xvzf tmux-${TMUX_VERSION}.tar.gz
 cd tmux-${TMUX_VERSION}
 ./configure CFLAGS="-I$HOME/local/include -I$HOME/local/include/ncurses" LDFLAGS="-L$HOME/local/lib -L$HOME/local/include/ncurses -L$HOME/local/include"
 CPPFLAGS="-I$HOME/local/include -I$HOME/local/include/ncurses" LDFLAGS="-static -L$HOME/local/include -L$HOME/local/include/ncurses -L$HOME/local/lib" make
-#cp tmux $HOME/local/bin
-#cd ..
+cp tmux $HOME/local/bin
+cd ..
 
 # cleanup
-#rm -rf $HOME/tmux_tmp
+rm -rf $HOME/tmux_tmp
 
-#echo "$HOME/local/bin/tmux is now available. You can optionally add $HOME/local/bin to your PATH."
+echo "$HOME/local/bin/tmux is now available. You can optionally add $HOME/local/bin to your PATH."
