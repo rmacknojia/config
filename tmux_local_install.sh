@@ -7,7 +7,7 @@
 # exit on error
 set -e
 
-TMUX_VERSION=2.5
+TMUX_VERSION=2.6
 LIBEVENT_VERSION=2.1.8
 NCURSES_VERSION=6.0
 export CPPFLAGS="-P"
