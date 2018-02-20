@@ -21,8 +21,8 @@ set hlsearch
 set smartcase     " ignore case if search pattern is all lowercase,
 
 "folding
-set foldmethod=syntax
-set foldlevelstart=1
+"set foldmethod=syntax
+"set foldlevelstart=1
 
 "wild menu
 set wildmenu
@@ -54,7 +54,7 @@ set statusline+=%b,0x%-8B\                   " current char
 set statusline+=%-14.(%l,%c%V%)\ %<%P        " offset
 
 
-"execute pathogen#infect()
+execute pathogen#infect()
 
 
 syntax enable
@@ -73,9 +73,38 @@ syn keyword type table_def enum_def type_def module_def
 
 "Nerd Tree
 map <C-d> :NERDTreeToggle<CR>
-let g:NERDTreeDirArrows=0
+"let g:NERDTreeDirArrows=0
+"NERDTree automatically when vim starts up
 "autocmd vimenter * NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+"open NERDTree automatically when vim starts up on opening a directory
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+"close vim if the only window left open is a NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+
+" NERDTress File highlighting
+function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
+ exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
+ exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
+endfunction
+" source files
+call NERDTreeHighlightFile('.c', '11', 'NONE', 'NONE', 'NONE')
+call NERDTreeHighlightFile('cpp', '11', 'NONE', 'NONE', 'NONE')
+call NERDTreeHighlightFile('h', '3', 'NONE', 'NONE', 'NONE')
+call NERDTreeHighlightFile('cc', '5', 'NONE', 'NONE', 'NONE')
+call NERDTreeHighlightFile('mm', '4', 'NONE', 'NONE', 'NONE')
+" shell scripts
+call NERDTreeHighlightFile('sh', '2', 'NONE', 'NONE', 'NONE')
+call NERDTreeHighlightFile('py', '2', 'NONE', 'NONE', 'NONE')
+call NERDTreeHighlightFile('lua', '2', 'NONE', 'NONE', 'NONE')
+call NERDTreeHighlightFile('bash', '2', 'NONE', 'NONE', 'NONE')
+call NERDTreeHighlightFile('zsh', '2', 'NONE', 'NONE', 'NONE')
+" makefiles
+call NERDTreeHighlightFile('mk', '13', 'NONE', 'NONE', 'NONE')
+call NERDTreeHighlightFile('makefile', '13', 'NONE', 'NONE', 'NONE')
+call NERDTreeHighlightFile('Makefile', '13', 'NONE', 'NONE', 'NONE')
+call NERDTreeHighlightFile('configure', '13', 'NONE', 'NONE', 'NONE')
 
 scriptencoding utf-8
 set encoding=utf-8
@@ -273,4 +302,26 @@ call <SID>set_hi("markdownHeadingDelimiter", s:light_blue, s:none, "NONE")
 call <SID>set_hi("markdownRule", s:light_blue, s:none, "NONE")
 
 
+" NERDTress File highlighting
+function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
+ exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg[0] .' guibg='. a:guibg .' guifg='. a:guifg
+ exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
+endfunction
+" source files
+call NERDTreeHighlightFile('.c', s:dark_pink, 'NONE', 'NONE', 'NONE')
+call NERDTreeHighlightFile('cpp', s:dark_pink, 'NONE', 'NONE', 'NONE')
+call NERDTreeHighlightFile('h', s:dark_pink, 'NONE', 'NONE', 'NONE')
+call NERDTreeHighlightFile('cc', s:dark_pink, 'NONE', 'NONE', 'NONE')
+call NERDTreeHighlightFile('mm', s:dark_pink, 'NONE', 'NONE', 'NONE')
+" shell scripts
+call NERDTreeHighlightFile('sh', s:dark_blue, 'NONE', 'NONE', 'NONE')
+call NERDTreeHighlightFile('py', s:dark_blue, 'NONE', 'NONE', 'NONE')
+call NERDTreeHighlightFile('lua', s:dark_blue, 'NONE', 'NONE', 'NONE')
+call NERDTreeHighlightFile('bash', s:dark_blue, 'NONE', 'NONE', 'NONE')
+call NERDTreeHighlightFile('zsh', s:dark_blue, 'NONE', 'NONE', 'NONE')
+" makefiles
+call NERDTreeHighlightFile('mk', s:dark_green, 'NONE', 'NONE', 'NONE')
+call NERDTreeHighlightFile('makefile', s:dark_green, 'NONE', 'NONE', 'NONE')
+call NERDTreeHighlightFile('Makefile', s:dark_green, 'NONE', 'NONE', 'NONE')
+call NERDTreeHighlightFile('configure', s:dark_green, 'NONE', 'NONE', 'NONE')
 
