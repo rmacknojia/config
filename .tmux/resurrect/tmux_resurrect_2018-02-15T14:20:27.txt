@@ -1,0 +1,16 @@
+pane	0	1	:Local	0	:	0	:	0	bash	:
+pane	0	1	:Local	0	:	1	:	1	bash	:
+pane	0	2	:QA AIX	0	:	0	:	1	bash	:ssh root@10.203.151.130
+pane	0	3	:AIX	0	:-	0	:	1	bash	:ssh 10.203.138.133
+pane	0	3	:AIX	0	:-	1	:	0	bash	:ssh 10.203.138.133
+pane	0	4	:code reviwe	0	:	0	:	1	bash	:
+pane	0	4	:code reviwe	0	:	1	:	0	bash	:
+pane	0	5	:solaris	0	:	0	:	1	bash	:ssh build@10.203.8.181
+pane	0	6	:[tmux]	1	:*	0	:	1	bash	:
+window	0	1	0	:	1f9f,365x90,0,0[365x45,0,0,0,365x44,0,46,1]
+window	0	2	0	:	b8bf,365x90,0,0,2
+window	0	3	0	:-	1726,365x90,0,0[365x51,0,0,3,365x38,0,52,4]
+window	0	4	0	:	9fac,365x90,0,0[365x45,0,0,5,365x44,0,46,8]
+window	0	5	0	:	b8c3,365x90,0,0,6
+window	0	6	1	:*	b8c4,365x90,0,0,7
+state	0	

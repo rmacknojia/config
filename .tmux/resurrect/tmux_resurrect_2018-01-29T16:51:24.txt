@@ -1,0 +1,23 @@
+pane	0	1	:AIX	1	:*	0	:	1	bash	:ssh 10.203.138.133
+pane	0	1	:AIX	1	:*	1	:	0	bash	:
+pane	0	1	:AIX	1	:*	2	:	0	bash	:ssh 10.203.138.133
+pane	0	1	:AIX	1	:*	3	:	0	bash	:
+pane	0	2	:bashAIX2	0	:#	0	:	0	bash	:ssh 10.203.138.135
+pane	0	2	:bashAIX2	0	:#	1	:	0	bash	:
+pane	0	2	:bashAIX2	0	:#	2	:	1	bash	:ssh 10.203.138.135
+pane	0	3	:cscope	0	:	0	:	1	bash	:
+pane	0	5	:copy	0	:-	0	:	1	bash	:
+pane	0	5	:copy	0	:-	1	:	0	bash	:
+pane	0	5	:copy	0	:-	2	:	0	bash	:
+pane	0	5	:copy	0	:-	3	:	0	bash	:
+pane	0	7	:redhat	0	:	0	:	1	bash	:ssh root@10.203.176.235
+pane	0	10	:AIX71	0	:	0	:	1	bash	:
+pane	0	10	:AIX71	0	:	1	:	0	bash	:
+pane	0	10	:AIX71	0	:	2	:	0	bash	:
+window	0	1	0	:-	328f,365x90,0,0[365x41,0,0,1,365x23,0,42,21,365x24,0,66{176x24,0,66,2,188x24,177,66,7}]
+window	0	2	0	:#	115a,365x90,0,0[365x20,0,0,5,365x18,0,21,25,365x50,0,40,9]
+window	0	3	1	:*	b8c3,365x90,0,0,6
+window	0	5	0	:	1f4f,365x90,0,0[365x34,0,0,11,365x11,0,35,16,365x21,0,47,24,365x21,0,69,19]
+window	0	7	0	:	dc91,365x90,0,0,22
+window	0	10	0	:	3c25,365x90,0,0[365x45,0,0,30,365x22,0,46,31,365x21,0,69,32]
+state	0	

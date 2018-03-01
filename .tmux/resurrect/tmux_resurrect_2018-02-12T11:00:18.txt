@@ -1,0 +1,41 @@
+pane	0	1	:AIX	1	:*	0	:	1	bash	:
+pane	0	2	:bashAIX2	0	:#	0	:	0	bash	:
+pane	0	2	:bashAIX2	0	:#	1	:	0	bash	:
+pane	0	2	:bashAIX2	0	:#	2	:	1	bash	:
+pane	0	3	:cscope	0	:	0	:	1	bash	:cscope -d
+pane	0	4	:bash	0	:	0	:	1	bash	:
+pane	0	4	:bash	0	:	1	:	0	bash	:
+pane	0	5	:git	0	:Z	0	:	0	bash	:
+pane	0	5	:git	0	:Z	1	:	0	bash	:
+pane	0	5	:git	0	:Z	2	:	0	bash	:
+pane	0	5	:git	0	:Z	3	:	1	bash	:
+pane	0	6	:core	0	:#	0	:	0	bash	:
+pane	0	6	:core	0	:#	1	:	1	bash	:
+pane	0	6	:core	0	:#	2	:	0	bash	:
+pane	0	7	:redhat	0	:#	0	:	1	bash	:
+pane	0	8	:bash	0	:-	0	:	1	bash	:
+pane	0	9	:Code Review	0	:#	0	:	0	bash	:
+pane	0	9	:Code Review	0	:#	1	:	1	bash	:
+pane	0	9	:Code Review	0	:#	2	:	0	bash	:
+pane	0	10	:AIX71	0	:	0	:	1	bash	:
+pane	0	10	:AIX71	0	:	1	:	0	bash	:
+pane	0	10	:AIX71	0	:	2	:	0	bash	:
+pane	0	11	:solaris	0	:#	0	:	0	bash	:
+pane	0	11	:solaris	0	:#	1	:	0	bash	:
+pane	0	11	:solaris	0	:#	2	:	1	bash	:
+pane	0	11	:solaris	0	:#	3	:	0	bash	:
+pane	0	12	:solaris sparc	0	:#	0	:	0	bash	:
+pane	0	12	:solaris sparc	0	:#	1	:	1	bash	:
+window	0	1	1	:*	b8bf,365x90,0,0,2
+window	0	2	0	:#	36f3,271x66,0,0[271x27,0,0,5,271x19,0,28,9,271x18,0,48,49]
+window	0	3	0	:	b8c3,365x90,0,0,6
+window	0	4	0	:	a49a,365x90,0,0[365x45,0,0,33,365x44,0,46,34]
+window	0	5	0	:Z	1f4f,365x90,0,0[365x34,0,0,11,365x11,0,35,16,365x21,0,47,24,365x21,0,69,19]
+window	0	6	0	:#	6e36,365x90,0,0[365x22,0,0,35,365x22,0,23,37,365x44,0,46,36]
+window	0	7	0	:#	dc91,365x90,0,0,22
+window	0	8	0	:-	5c98,365x90,0,0,38
+window	0	9	0	:#	bb2d,365x90,0,0[365x47,0,0,41,365x19,0,48,43,365x22,0,68,47]
+window	0	10	0	:	3c25,365x90,0,0[365x45,0,0,30,365x22,0,46,31,365x21,0,69,32]
+window	0	11	0	:#	8115,365x90,0,0[365x12,0,0,42,365x20,0,13,52,365x23,0,34,46,365x32,0,58,45]
+window	0	12	0	:#	a497,365x90,0,0[365x45,0,0,50,365x44,0,46,51]
+state	0	
