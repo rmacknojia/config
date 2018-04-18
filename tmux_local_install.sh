@@ -7,9 +7,9 @@
 # exit on error
 set -e
 
-TMUX_VERSION=2.6
+TMUX_VERSION=2.7
 LIBEVENT_VERSION=2.1.8
-NCURSES_VERSION=6.0
+NCURSES_VERSION=6.1
 export CPPFLAGS="-P"
 
 # create our directories

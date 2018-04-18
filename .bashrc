@@ -1,7 +1,7 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
-
+export TERM=xterm-256color
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -137,3 +137,6 @@ alias ubun='ssh administrator@10.203.176.215'
 alias cscopegen='cscope -q -R -b -i cscope.files'
 alias cscopegen='find . -name "*.c" -o -name "*.cc" -o -name "*.cpp" -o -name "*.h" -o -name "*.hh" -o -name "*.hpp" > cscope.files && cscope -q -R -b -i cscope.files'
 alias download='cd /mnt/c/Users/rizwanm/Downloads/'
+
+
+export PATH=$HOME/local/bin:$PATH
