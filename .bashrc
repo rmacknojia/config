@@ -125,18 +125,41 @@ export LS_COLORS
 export P4USER=rizwanm
 #export P4CLIENT=timm_aix71_build
 export P4PORT=10.52.114.110:1667
-export DISPLAY=:0
+#for mobaxterm
+export DISPLAY=:10.0
+#SOLARIS
+alias sol10u5='ssh root@10.203.136.249'
+alias sol10='ssh root@10.203.151.164'
+alias sol11='ssh root@10.203.136.18'
+alias sol10x='ssh root@10.203.136.24'
+alias sol11x='ssh root@10.203.136.25'
+alias sol11u4='ssh root@10.203.136.86'
+#alias sol11u4x='ssh root@10.203.136.25'
+
+
+
+######### Solaris servers ###########
+alias netra='ssh root@10.203.136.31'
+alias t2000='ssh root@10.203.138.190'
+alias t2000-2='ssh root@10.203.138.210'
+alias s72='ssh root@10.203.138.150'
+alias t71='ssh root@10.203.151.159'
+
+
+
+alias dsm='ssh root@10.203.136.128'
 alias aix72='ssh 10.203.138.108'
 alias aix='ssh 10.203.138.133'
 alias aix2='ssh 10.203.138.135'
 alias aix71='ssh 10.203.138.107'
-alias aix61='ssh 10.203.138.106'
+alias aix61='ssh root@10.203.136.29'
 alias aixqa='ssh root@10.203.151.130'
-alias solx='ssh build@10.203.8.181'
 alias ubun='ssh administrator@10.203.176.215'
 alias cscopegen='cscope -q -R -b -i cscope.files'
 alias cscopegen='find . -name "*.c" -o -name "*.cc" -o -name "*.cpp" -o -name "*.h" -o -name "*.hh" -o -name "*.hpp" > cscope.files && cscope -q -R -b -i cscope.files'
 alias download='cd /mnt/c/Users/rizwanm/Downloads/'
-
+ 
+function setssh() { cat .ssh/id_rsa.pub | ssh "$@" 'mkdir -p .ssh; cat >> .ssh/authorized_keys'; ssh "$@"; }
 
 export PATH=$HOME/local/bin:$PATH
+export windows=rizwanm@10.52.117.142:/cygdrive/c/Users/rizwanm/Downloads

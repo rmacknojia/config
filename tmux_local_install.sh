@@ -7,7 +7,7 @@
 # exit on error
 set -e
 
-TMUX_VERSION=2.7
+TMUX_VERSION=2.9
 LIBEVENT_VERSION=2.1.8
 NCURSES_VERSION=6.1
 export CPPFLAGS="-P"
@@ -50,7 +50,7 @@ tar xvzf tmux-${TMUX_VERSION}.tar.gz
 cd tmux-${TMUX_VERSION}
 ./configure CFLAGS="-I$HOME/local/include -I$HOME/local/include/ncurses" LDFLAGS="-L$HOME/local/lib -L$HOME/local/include/ncurses -L$HOME/local/include"
 CPPFLAGS="-I$HOME/local/include -I$HOME/local/include/ncurses" LDFLAGS="-static -L$HOME/local/include -L$HOME/local/include/ncurses -L$HOME/local/lib" make
-cp tmux $HOME/local/bin
+cp tmux $HOME/local/bin/tmux_2.9
 cd ..
 
 # cleanup

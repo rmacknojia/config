@@ -13,6 +13,7 @@ set expandtab
 set shiftwidth=4
 set softtabstop=4
 set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
+autocmd FileType make setlocal noexpandtab
 
 "Search
 set ignorecase
@@ -185,8 +186,8 @@ call <SID>set_hi("StatusLine", s:default_white, s:mid_gray, "NONE")
 call <SID>set_hi("StatusLineNC", s:default_white, s:light_gray, "NONE")
 call <SID>set_hi("Pmenu", s:none, s:none, "NONE")
 call <SID>set_hi("PmenuSel", s:none, s:dark_gray, "NONE")
-call <SID>set_hi("IncSearch", s:default_white, s:light_yellow, "inverse")
-call <SID>set_hi("Search", s:default_white, s:light_yellow, "inverse")
+call <SID>set_hi("IncSearch", s:none, s:none, "inverse")
+call <SID>set_hi("Search", s:none, s:none, "inverse")
 "call <SID>set_hi("Search", s:none, s:none, "underline")
 call <SID>set_hi("Directory", s:lavender, s:none, "NONE")
 call <SID>set_hi("Folded", s:light_yellow, s:dark_gray, "NONE")
